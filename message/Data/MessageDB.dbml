@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="simple" Class="MessageDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A8K36OK\SQLEXPRESS;Initial Catalog=simple;Integrated Security=True" SettingsObjectName="message.Properties.Settings" SettingsPropertyName="simpleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Message" Member="Messages">
+    <Type Name="Message">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="message" Member="message1" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

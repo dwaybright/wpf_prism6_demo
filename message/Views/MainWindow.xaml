@@ -1,0 +1,25 @@
+﻿<Window x:Class="message.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:message.Views"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Button x:Name="LoadMessageBoard" Content="MessageBoard" Command="{Binding NavigateCommand}" CommandParameter="MessageBoard"/>
+            <Button x:Name="LoadEditMessage" Content="EditMessage" Command="{Binding NavigateCommand}" CommandParameter="EditMessage"/>
+        </Grid>
+        
+        <ContentControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion"/>
+    </Grid>
+</Window>
